@@ -1,4 +1,8 @@
 # Exploring-Convolutional-Layers-Through-Data-and-Experiments
+
+> **📊 Evaluation Available**: This repository has been evaluated against assignment requirements. See [EVALUATION_SUMMARY.md](EVALUATION_SUMMARY.md) for the English summary or [EVALUATION.md](EVALUATION.md) for the detailed Spanish evaluation.  
+> **Current Grade: 1/5** - See evaluation for critical issues and improvement recommendations.
+
 In this course, neural networks are not treated as black boxes but as architectural components whose design choices affect performance, scalability, and interpretability. This assignment focuses on convolutional layers as a concrete example of how inductive bias is introduced into learning systems. 
 
 This project explores convolutional neural networks as architectural components rather than black-box models. Using the Fashion-MNIST dataset, we analyze how convolutional layers introduce inductive bias, compare them against a non-convolutional baseline, and evaluate how architectural decisions impact learning and performance.
