@@ -19,6 +19,26 @@ The main deliverable of this project is a Jupyter Notebook containing:
 - Deployment to SageMaker
 
 ---
+## Dataset Description
+
+The Fashion-MNIST dataset consists of 70,000 grayscale images of size 28×28 pixels, divided into 10 clothing categories such as T-shirt, trouser, sneaker, and bag. The dataset is split into 60,000 training samples and 10,000 test samples.
+
+Each image is represented as a single-channel (grayscale) 2D tensor, making it well-suited for convolutional neural networks.
+---
+
+
+## Model Architecture
+
+The baseline model consists of:
+- Input layer (28×28 flattened)
+- Fully connected dense layers
+- Softmax output layer
+
+The convolutional neural network consists of:
+- Convolutional layers with ReLU activation
+- Max pooling layers
+- Fully connected layers
+- Softmax output layer
 
 ### Prerequisites
 
@@ -103,6 +123,14 @@ These steps verify that the model generalizes to unseen data.
 
 ---
 
+## Experimental Results
+
+The baseline fully connected model achieved lower accuracy and showed signs of overfitting when compared to the convolutional model.
+
+The CNN achieved higher validation and test accuracy, demonstrating better generalization due to spatial feature extraction. Increasing the number of convolutional layers improved performance up to a point, after which gains diminished while model complexity increased.
+
+
+
 ### Coding style and validation
 
 The code follows standard Python and TensorFlow/Keras best practices:
@@ -139,6 +167,11 @@ Due to container initialization and environment setup, endpoint creation may tak
 * [AWS SageMaker](https://aws.amazon.com/sagemaker/) – Model deployment and inference
 
 ---
+
+## Interpretation
+
+Convolutional layers outperformed the baseline model because they exploit the spatial structure of image data. By using local receptive fields and shared weights, convolution introduces an inductive bias that favors translation-invariant feature learning;This bias makes CNNs particularly effective for image-based tasks, while fully connected networks struggle to scale efficiently. Convolutional architectures may not be appropriate for problems where spatial locality is irrelevant, such as tabular or purely symbolic data
+
 
 ## Contributing
 
